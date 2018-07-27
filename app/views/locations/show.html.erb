@@ -1,0 +1,25 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-">
+      <h1><%= @location.name %></h1>
+    </div>
+    <div class="col-sm">
+      <p><%= link_to "Edit", edit_location_path, class: "badge badge-primary" %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <p>City: <%= @location.city %></p>
+      <p>State: <%= @location.state %></p>
+
+      <p>Trainers:</p>
+      <ul>
+        <% @location.trainers.each do |trainer| %>
+          <li><%= link_to trainer.full_name, trainer %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

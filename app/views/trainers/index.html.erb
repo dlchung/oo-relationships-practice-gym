@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-">
+      <h1>Our Trainers</h1>
+    </div>
+    <div class="col-sm">
+      <%= link_to "Add new", new_trainer_path, class: "badge badge-success" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <ul>
+      <% @trainers.each do |trainer| %>
+        <li><%= link_to trainer.full_name, trainer %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<h1>Add New Trainer</h1>
+
+<ul>
+  <% @trainer.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</ul>
+
+<%= form_for @trainer do |f| %>
+  <p><%= f.label :first_name %>: <%= f.text_field :first_name %></p>
+  <p><%= f.label :last_name %>: <%= f.text_field :last_name %></p>
+  <p><%= f.label :age %>: <%= f.text_field :age %></p>
+  <p><%= f.label :location_ids, "Locations" %>: <%= f.collection_check_boxes :location_ids, Location.all, :id, :name %></p>
+
+  <p><%= f.submit %></p>
+<% end %>

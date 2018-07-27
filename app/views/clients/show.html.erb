@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-">
+      <h1><%= @client.full_name %></h1>
+    </div>
+    <div class="col-sm">
+      <p><%= link_to "Edit", edit_client_path, class: "badge badge-primary" %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-">
+      <p>Trainer: <%= link_to @client.trainer.full_name, @client.trainer %></p>
+    </div>
+  </div>
+</div>

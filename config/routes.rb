@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :locations
   resources :trainers
   resources :clients
+
+  root to:'static#index'
 end

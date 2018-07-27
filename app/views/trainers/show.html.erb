@@ -1,0 +1,39 @@
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-">
+      <h1><%= @trainer.full_name %></h1>
+    </div>
+    <div class="col-sm">
+      <p><%= link_to "Edit", edit_trainer_path, class: "badge badge-primary" %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <p>Age: <%= @trainer.age %></p>
+
+      <p>Bio: <%= @trainer.bio %></p>
+
+      <p>Locations:</p>
+      <ul>
+        <% @trainer.locations.each do |location| %>
+          <li><%= link_to location.name, location %></li>
+        <% end %>
+      </ul>
+
+      <p>Clients:</p>
+      <ul>
+        <% @trainer.clients.each do |client| %>
+          <li><%= link_to client.full_name, client %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-sm">
+      <p><%= image_tag @trainer.avatar_url %></p>
+    </div>
+  </div>
+
+</div>

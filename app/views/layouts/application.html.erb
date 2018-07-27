@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OoRelationshipsPracticeGym</title>
+    <title>The Lazy Gym Rat</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand text-white">The Lazy Gym Rat</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/locations" class="nav-link">Locations</a></li>
+            <li class="nav-item"><a href="/trainers" class="nav-link">Trainers</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main role="main" class="container mt-5">
+      <%= yield %>
+    </main>
   </body>
 </html>
